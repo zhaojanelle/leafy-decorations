@@ -1,0 +1,43 @@
+html {
+  font-family: Lora, serif;
+}
+
+.masthead {
+
+}
+
+.logo {
+  text-align: center;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+
+}
+
+.banner {
+
+}
+
+.banner-content {
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .logo {
+    text-align: left;
+  }
+
+  .nav {
+    text-align: right;
+  }
+
+}

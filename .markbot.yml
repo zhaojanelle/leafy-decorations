@@ -1,0 +1,86 @@
+repo: 'leafy-decorations'
+canvasCourse: 'web-dev-1'
+
+naming: true
+restrictFileTypes: true
+liveWebsite: true
+
+git:
+  numCommits: 2
+  allCommitted: true
+  allSynced: true
+
+html:
+  - path: 'index.html'
+    locked: true
+
+css:
+  - path: 'css/main.css'
+    valid: true
+    bestPractices: true
+    has:
+      - ['html', 'font-family', 'Lora, serif']
+      - ['.masthead']
+      - ['.banner']
+      - ['.banner-content']
+      - ['@60em', '.logo', 'text-align', 'left']
+      - ['@60em', '.nav', 'text-align', 'right']
+    has_not:
+      - ['img']
+      - ['picture']
+      - ['.img-flex']
+    search:
+      - ':hover'
+      - '#588477'
+      - '#fff'
+      - '#467366'
+      - '#2d5a4d'
+      - '#145b1d'
+      - 'rgba\(16, 52, 41, \.8\)'
+      - 'rgba\(16, 52, 41, 0\)'
+      - 'linear-gradient'
+      - 'background'
+      - 'border'
+      - 'color'
+      - 'url\("'
+      - 'leaf-bg\.svg'
+      - 'leaf-icon\.svg'
+      - 'two-leaves\.svg'
+  - path: "css/modules.css"
+    locked: true
+  - path: "css/grid.css"
+    locked: true
+  - path: "css/type.css"
+    locked: true
+
+files:
+  - path: "images/banner.jpg"
+    maxWidth: 2500
+    minWidth: 2500
+    maxSize: 100
+    smushed: true
+  - path: "images/leaf-bg.svg"
+    maxSize: 1
+  - path: "images/leaf-icon.svg"
+    maxSize: 1
+  - path: "images/two-leaves.svg"
+    maxSize: 1
+
+screenshots:
+  - path: 'index.html'
+    sizes: [320, 400, 608, 960, 1440]
+
+functionality:
+  - path: 'index.html'
+    tests:
+      - |
+        let link = $('nav a');
+        let oldBg = css(link).backgroundColor;
+        let oldBgImg = css(link).backgroundImage;
+        let oldBgPos = css(link).backgroundPosition;
+
+        hover('nav a', function () {
+          if (css(link).backgroundColor == oldBg) fail('The background colour of the navigation links doesn’t change when hovered');
+          if (css(link).backgroundImg == oldBgImg && css(link).backgroundPosition == oldBgPos) fail('The background image of the navigation links doesn’t change when hovered');
+          pass();
+        });
