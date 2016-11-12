@@ -47,7 +47,7 @@ These are the only CSS properties you’ll need to add to accomplish the layout:
 Visually match the images in the “screenshots” folder and create the interaction shown in the linked video.
 
 - Final screenshots in the “screenshots” folder.
-- [**Watch this video to see how it interacts.**](https://youtu.be/)
+- [**Watch this video to see how it interacts.**](https://youtu.be/d3KFWQXEGkg)
 
 ---
 
