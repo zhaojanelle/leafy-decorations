@@ -1,14 +1,16 @@
 repo: 'leafy-decorations'
 canvasCourse: 'web-dev-3'
 
-naming: true
-restrictFileTypes: true
-liveWebsite: true
-
-git:
-  numCommits: 2
-  allCommitted: true
-  allSynced: true
+inherit:
+  - naming-restrict-live
+  - git-2
+  - css
+  - modulifier
+  - modulifier-list-group
+  - gridifier
+  - typografier
+  - nav-hover
+  - screenshots-all
 
 html:
   - path: 'index.html'
@@ -46,6 +48,7 @@ css:
       - 'leaf-bg\.svg'
       - 'leaf-icon\.svg'
       - 'two-leaves\.svg'
+
   - path: "css/modules.css"
     locked: true
   - path: "css/grid.css"
@@ -66,21 +69,15 @@ files:
   - path: "images/two-leaves.svg"
     maxSize: 1
 
-screenshots:
-  - path: 'index.html'
-    sizes: [320, 400, 608, 960, 1440]
-
 functionality:
   - path: 'index.html'
     tests:
       - |
         let link = $('nav a');
-        let oldBg = css(link).backgroundColor;
         let oldBgImg = css(link).backgroundImage;
         let oldBgPos = css(link).backgroundPosition;
 
         hover('nav a', function () {
-          if (css(link).backgroundColor == oldBg) fail('The background colour of the navigation links doesn’t change when hovered');
           if (css(link).backgroundImg == oldBgImg && css(link).backgroundPosition == oldBgPos) fail('The background image of the navigation links doesn’t change when hovered');
           pass();
         });
