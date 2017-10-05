@@ -4,10 +4,12 @@ html {
 }
 
 .masthead {
-  background: url("../images/leaf-bg.svg") repeat;
+  background-image: url("../images/leaf-bg.svg") repeat;
   background-position: left top;
   background-color: #588477;
   background-size: 64px auto;
+  border-top: 3px solid #2d5a4d;
+  border-bottom: 3px solid #2d5a4d;
 }
 
 .logo {
@@ -21,7 +23,7 @@ html {
 .nav a {
   text-decoration: none;
   color: #fff;
-  border:  3px solid #145b1d;
+  border:  3px solid #2d5a4d;
   border-radius: 8px;
   background-color: #467366;
 }
@@ -30,24 +32,25 @@ html {
  color: #467366;
  background: url("../images/leaf-icon.svg") no-repeat;
  background-size: contain;
- background-position: left center;
+ background-position: center;
  background-color: #fff;
- padding-left: .75em;
 
 }
 
 .banner {
-
+  background:
+    linear-gradient(to top, rgba(16, 52, 41, .8), rgba(16, 52, 41, 0)) no-repeat center bottom / 100% 50%,
+    url("../images/banner.jpg") no-repeat center top /  cover;
+  border-bottom: solid 3px #2d5a4d;
 }
 
 .banner-content {
-  background:
-    linear-gradient(to top, rgba(0,0,0,0.5), transparent) no-repeat center bottom / 100% 50%,
-    url("../images/banner.jpg") no-repeat center top /  cover;
-  padding-top: 66.54%;
-  overflow: hidden;
-  position: relative;
-  max-height: 75vh;
+  color: #fff;
+  background-image: url("../images/two-leaves.svg");
+  background-position: .75em 180px;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  padding-top: 300px;
 }
 
 @media only screen and (min-width: 60em) {
