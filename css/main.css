@@ -1,9 +1,12 @@
 html {
   font-family: Lora, serif;
+  color: #fff;
 }
 
 .masthead {
-
+  background: url("../images/leaf-bg.svg"); repeat left top;
+  background-color: #588477;
+  background-size: 64px auto;
 }
 
 .logo {
@@ -27,7 +30,13 @@ html {
 }
 
 .banner-content {
-  background-image: url("../images/banner.jpg");
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.5), transparent) no-repeat center bottom / 100% 50%,
+    url("../images/banner.jpg") no-repeat center top /  cover;
+  padding-top: 66.54%;
+  overflow: hidden;
+  position: relative;
+  max-height: 75vh;
 }
 
 @media only screen and (min-width: 60em) {
