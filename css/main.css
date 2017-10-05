@@ -27,7 +27,7 @@ html {
 }
 
 .banner-content {
-
+  background-image: url("../images/banner.jpg");
 }
 
 @media only screen and (min-width: 60em) {
